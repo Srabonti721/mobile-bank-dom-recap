@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main </title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-700">
+    <section class="max-w-md min-h-screen bg-gray-100 mx-auto py-6">
+        <header>
+            <nav class="flex justify-around items-center border-b-2 pb-5 border-gray-300">
+                <div class="flex justify-center items-center">
+                    <img class="w-16" src="assets/Group.png" alt="">
+                    <div>
+                        <h1 class="font-bold text-xl">$ <span id="main-balance">2000</span></h1>
+                        <p class="border rounded-lg p-1 ">Available Balance</p>
+                    </div>
+                </div>
+                <button id="logout-btn" class="btn">logout</button>
+            </nav>
+        </header>
+        <div class="px-2 my-4 space-y-2">
+            <h1 class="text-3xl font-bold ">🔥 Welcome to Payooo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        </div>
+        <div class="box-container px-2 mt-10 grid grid-cols-3 gap-4">
+            <!-- box -->
+            <div id="box-AddMoney" class="box text-center border rounded-lg p-4">
+                <img class="w-9 mx-auto" src="assets/wallet1.png" alt="">
+                <h1>Add Money</h1>
+            </div>
+            <div id="box-cashOut" class="box text-center border rounded-lg p-4">
+                <img class="w-9 mx-auto" src="assets/bonus1.png" alt="">
+                <h1>CashOut</h1>
+            </div>
+            <div class="box text-center border rounded-lg p-4">
+                <img class="w-9 mx-auto" src="assets/send1.png" alt="">
+                <h1>Transfer Money</h1>
+            </div>
+            <div class="box text-center border rounded-lg p-4">
+                <img class="w-9 mx-auto" src="assets/money1.png" alt="">
+                <h1>Get Bonus</h1>
+            </div>
+            <div class="box text-center border rounded-lg p-4">
+                <img class="w-9 mx-auto" src="assets/transaction1.png" alt="">
+                <h1>Pay Bill</h1>
+            </div>
+            <div class="box text-center border rounded-lg p-4">
+                <img class="w-9 mx-auto" src="assets/purse1.png" alt="">
+                <h1>Transactions</h1>
+            </div>
+        </div>
+        <!-- form -->
+        <div id="AddMoney">
+            <h1 class="text-2xl my-4 px-2 ">Add Money</h1>
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <legend>Select A Bank</legend>
+                            <select class="select appearance-none">
+                                <option disabled selected>Select A Bank</option>
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nagad">Nagad</option>
+                                <option value="Roket">Roket</option>
+                            </select>
+                            <label class="label">Mobile Number</label>
+                            <input value="01234567892" id="mobile-number" type="number" class="input"
+                                placeholder="Enter your number" required />
+                            <label class="label">Amount to Add</label>
+                            <input  id="amount" type="number" class="input"
+                                placeholder="Enter your Amount" required />
+                            <label class="label">4 Digit Pin</label>
+                            <input value="1234" id="pin" type="text" class="input" placeholder="Enter 4 Digit Pin" required />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="addMoney-btn"
+                                class="btn  bg-blue-600 border-none rounded-full btn-neutral mt-4">Add Money</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <section id="cashOut">
+            <div>
+            <h1 class="text-2xl my-4 px-2 ">CashOut</h1>
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <label class="label">Mobile Number</label>
+                            <input value="01234567892" id="mobile-number" type="number" class="input"
+                                placeholder="Enter your number" required />
+                            <label class="label">Amount to Add</label>
+                            <input  id="cashOut-amount" type="number" class="input"
+                                placeholder="Enter your Amount" required />
+                            <label class="label">4 Digit Pin</label>
+                            <input value="1234" id="CashOut-pin" type="text" class="input" placeholder="Enter 4 Digit Pin" required />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="CashOut-btn"
+                                class="btn  bg-blue-600 border-none rounded-full btn-neutral mt-4">CashOut</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
+    <script src="script/addMoney.js"></script>
+    <script src="script/cashOut.js"></script>
+    <script src="script/toggle.js"></script>
+</body>
+
+</html>
