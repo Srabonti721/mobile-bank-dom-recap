@@ -7,6 +7,16 @@
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        #transaction{
+            background-color:blue;
+            color: white;
+            border: 2px solid blue;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-700">
@@ -49,7 +59,7 @@
                 <img class="w-9 mx-auto" src="assets/transaction1.png" alt="">
                 <h1>Pay Bill</h1>
             </div>
-            <div class="box text-center border rounded-lg p-4">
+            <div id="transaction-box" class="box text-center border rounded-lg p-4">
                 <img class="w-9 mx-auto" src="assets/purse1.png" alt="">
                 <h1>Transactions</h1>
             </div>
@@ -62,7 +72,7 @@
                     <form class="card-body">
                         <fieldset class="fieldset">
                             <legend>Select A Bank</legend>
-                            <select class="select appearance-none">
+                            <select id="allBank" class="select appearance-none">
                                 <option disabled selected>Select A Bank</option>
                                 <option value="Bkash">Bkash</option>
                                 <option value="Nagad">Nagad</option>
@@ -109,6 +119,13 @@
             </div>
         </div>
         </section>
+        <!-- transaction -->
+        <section id="transaction">
+          <h1 class="text-3xl font-bold text-center py-4">transaction-history</h1>
+          <div id="transaction-container">
+            
+          </div>
+        </section>
     </section>
 
     <!-- another way -->
@@ -116,6 +133,7 @@
      <script src="utility/utility.js"></script>
      <script src="js/add-money.js"></script>
      <script src="js/cashOut.js"></script>
+     <script src="js/transction.js"></script>
     <!-- <script src="script/addMoney.js"></script> -->
     <!-- <script src="script/cashOut.js"></script> -->
     <!-- <script src="script/toggle.js"></script> -->
